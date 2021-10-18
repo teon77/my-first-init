@@ -20,3 +20,11 @@ const TimeFromAToB = (firstDateArr, secondDateArr) => {
     }
 }
 
+const daysInMonth = (date, format = "YYYY-MM") => {
+    try{
+    return moment(date, format).daysInMonth();
+    } catch (error) {
+        console.error(error);
+        console.log("You Should call the function with two strings, example: ('2012-02', 'YYYY-MM')")
+    }
+}
